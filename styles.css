@@ -645,9 +645,9 @@ footer a {
   #contact input[type="submit"] {
     display: block;
     width: 20%;
-    margin-left:70%;
-    margin-top:3em;
-    margin-bottom:2em;
+    margin-left: 70%;
+    margin-top: 3em;
+    margin-bottom: 2em;
     background-color: var(--purple);
     color: var(--white);
     padding: 20px 10px;
@@ -663,21 +663,21 @@ footer a {
 }
 
 @media only screen and (min-width: 1200px) {
-  #menu-toggle{
-    position:absolute;
-    margin-top:-30px;
+  #menu-toggle {
+    position: absolute;
+    margin-top: -30px;
   }
 
-  header h1 { 
-    margin-left:-35px;
+  header h1 {
+    margin-left: -35px;
   }
 
   header p {
-    margin-top:-20px;
-    margin-left:260px;
+    margin-top: -20px;
+    margin-left: 260px;
   }
 
-  #intro #img-grid{
+  #intro #img-grid {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -690,7 +690,7 @@ footer a {
   }
 
   #plan div section img {
-    width:100px;
+    width: 100px;
   }
 
   #testimonials div section {
@@ -703,4 +703,3 @@ footer a {
     height: 200px;
   }
 }
-
