@@ -218,7 +218,6 @@ body {
 
 /****** Header ******/
 header {
-  background: rgb(2, 0, 36);
   background: linear-gradient(var(--teal), var(--white));
   padding: 10px;
   margin-bottom: 3em;
