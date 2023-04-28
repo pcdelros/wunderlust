@@ -141,6 +141,8 @@ table {
   --light-gray: #eaeaea;
   --white: #ffffff;
   --black: #000000;
+  --header-fonts: "Molle", cursive;
+  --body-fonts: "Montserrat", sans-serif;
 }
 
 /****** Mobile ******/
@@ -161,6 +163,7 @@ body {
 
 /****** Toggle Menu ******/
 #menu-toggle {
+  font-family: var(--body-fonts);
   text-transform: uppercase;
   display: inline-block;
   position: absolute;
@@ -188,14 +191,15 @@ body {
 
 #menu-toggle ul li {
   display: block;
-  background-color: var(--blue);
+  background-color: var(--teal);
   text-align: center;
   padding: 2em 11em;
   border: 1px solid;
 }
 
 #menu-toggle ul li a {
-  color: white;
+  font-weight: bold;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -226,33 +230,41 @@ header {
 }
 
 h1 {
+  font-family: var(--header-fonts);
+  color: var(--dark-gray);
   margin: 0 10%;
   font-size: 3em;
 }
 
 header p {
+  font-family: var(--body-fonts);
+  margin: 0 10%;
+  text-align: left;
   width: 70%;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 /****** Intro ******/
 h2,
 h3 {
+  font-family: var(--header-fonts);
   margin: 0 10%;
   font-size: 3em;
 }
 
 #intro p {
-  margin: 1% 10%;
+  font-family: var(--body-fonts);
+  margin: 0 10%;
+  text-align: left;
   margin-bottom: 1em;
-  font-size: 20px;
+  line-height: 2em;
+  font-size: 15px;
 }
 
 #intro img {
   width: 100%;
   margin-bottom: 1em;
 }
-
 
 /****** Plan ******/
 #plan {
@@ -265,6 +277,8 @@ h3 {
 }
 
 #plan h4 {
+  font-family: var(--body-fonts);
+  font-weight: bold;
   text-align: center;
   font-size: 27px;
   text-transform: uppercase;
@@ -294,76 +308,399 @@ h3 {
 
 /****** Testimonials ******/
 #testimonials div {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#testimonials h3 {
+  margin-top: 1em;
 }
 
 #testimonials div section {
-    display:flex;
-    flex-direction: column;
-    width:60%;
-    margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 2em 0;
 }
 
-#testimonials section h4, p, q {
-    text-align: center;
-    margin:1% 0;
+#testimonials section h4,
+p,
+q {
+  text-align: center;
+  margin: 1% 0;
 }
 
 #testimonials section h4 {
-    text-transform: uppercase;
-    font-size: 2em;
+  font-family: var(--body-fonts);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
 }
 
-#testimonials section p, q {
-    font-size: 24px;
+#testimonials section p,
+q {
+  font-family: var(--body-fonts);
+  font-size: 24px;
 }
 
 #testimonials section q {
-    quotes:auto;
-    font-style:italic;
+  quotes: auto;
+  font-style: italic;
 }
 
 #testimonials section q:after {
-    content: close-quote;
+  content: close-quote;
 }
 
 #testimonials section q:before {
-    content: open-quote;
+  content: open-quote;
 }
 
 /****** About ******/
 #about {
-    background-color: var(--blue);
+  background-color: var(--blue);
 }
 
-
-#about div{
-    background-color: red;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    flex-direction: row;
-
+#about div {
+  background-color: var(--blue);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
 }
 
 #about section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: lime;
-    padding:2em;
-    text-align: center;
-    width:25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  text-align: center;
+  width: 25%;
 }
 
 #about section img {
-    width: 125px;
-    height: 125px;
+  width: 125px;
+  height: 125px;
 }
 
+#about section h4 {
+  font-family: var(--body-fonts);
+  font-weight: bold;
+  margin-top: 5%;
+  text-transform: uppercase;
+  font-size: 18px;
+}
 
+#about section p {
+  font-family: var(--body-fonts);
+}
 
+/****** Contact Us ******/
 
+#contact {
+  margin-top: 30px;
+  font-family: var(--body-fonts);
+}
+
+#contact h3 {
+  margin-left: 5%;
+  margin-bottom: 10px;
+  font-size: 3em;
+}
+
+#contact .form-required {
+  font-style: italic;
+  font-size: medium;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#contact label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact select {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 20px;
+  font-size: 1rem;
+  border: 2px solid var(--purple);
+}
+
+#contact input[type="submit"] {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#contact .custom-select {
+  margin-bottom: 2em;
+  height: 40px;
+}
+
+#contact .custom-select select {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 1rem;
+  border: 2px solid var(--purple);
+}
+
+#contact .radio-input input[type="radio"] {
+  display: none;
+}
+
+#contact fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 1em auto;
+}
+
+#contact fieldset legend {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+#contact .radio-input .radio-control {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+  margin-right: 10px;
+  top: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#contact .radio-label {
+  font-size: 1rem;
+}
+
+#contact .form-required {
+  color: var(--purple);
+  font-family: var(--body-fonts);
+}
+
+/****** Footer ******/
+footer {
+  font-family: var(--body-fonts);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-gray);
+  align-items: center;
+}
+
+footer p {
+  margin: 1em 0;
+}
+
+footer a {
+  margin: 1em 0;
+  text-decoration: none;
+  color: var(--black);
+}
+
+/****** Tablet (iPad, Nexus 9) ******/
+@media only screen and (min-width: 767px) {
+  #menu-toggle {
+    display: flex;
+    border: none;
+    position: relative;
+    background: none;
+  }
+
+  #menu-toggle ul {
+    display: inline-block;
+    margin: 0 auto;
+    border: none;
+  }
+
+  #menu-toggle ul li {
+    display: inline-block;
+    margin: 10px;
+    background-color: var(--white);
+    padding: 1em 2em;
+    border: none;
+  }
+
+  #menu-toggle ul li:hover {
+    background-color: var(--yellow);
+  }
+
+  #menu-toggle label {
+    display: none;
+    border: none;
+  }
+
+  #logo img {
+    height: 8em;
+  }
+
+  header h1 {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: -3%;
+    display: inline-block;
+  }
+
+  header p {
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 26%;
+  }
+
+  #img-grid {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 75%;
+  }
+
+  #img-grid img[src="images/majorca-waves.png"] {
+    width: 50%;
+  }
+
+  #img-grid img[src="images/majorca-beach.png"] {
+    width: 50%;
+  }
+
+  #plan div {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  #plan div section {
+    margin: 1em auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  #testimonials div {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  #testimonials div section {
+    width: 50%;
+  }
+
+  #testimonials section img {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+  }
+
+  #about {
+    padding-top: 3em;
+  }
+
+  #about div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #about div section {
+    width: 15%;
+  }
+
+  #about div section img {
+    margin: 0 auto;
+  }
+
+  #contact fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #contact input[type="submit"] {
+    display: block;
+    width: 20%;
+    margin-left:70%;
+    margin-top:3em;
+    margin-bottom:2em;
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 20px 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #menu-toggle{
+    position:absolute;
+    margin-top:-30px;
+  }
+
+  header h1 { 
+    margin-left:-35px;
+  }
+
+  header p {
+    margin-top:-20px;
+    margin-left:260px;
+  }
+
+  #intro #img-grid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  #plan div section {
+    margin: 1em auto;
+    width: 200px;
+    height: 200px;
+  }
+
+  #plan div section img {
+    width:100px;
+  }
+
+  #testimonials div section {
+    width: 25%;
+  }
+
+  #testimonials section img {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+  }
+}
 
